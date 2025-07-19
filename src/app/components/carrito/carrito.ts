@@ -8,4 +8,27 @@ import { Component } from '@angular/core';
 })
 export class Carrito {
 
+  cantidadProductos: number = 0;
+  totalCarrito: number = 0;
+  notificacion: string = "";
+
+  ngOnInit() {
+    this.comprobarNotificacion();
+  }
+
+  comprobarNotificacion() {
+
+    let limitePrecio = 1000000;
+
+    if(this.totalCarrito > limitePrecio) {
+
+      this.notificacion = `!has llegado al limite de compra ${limitePrecio}`;
+
+    } else {
+
+      this.notificacion = "";
+
+    }
+  }
 }
+

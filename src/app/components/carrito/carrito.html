@@ -12,6 +12,8 @@
     <button>Vaciar carrito</button>
 </div>
 
-<div class="notificacion">
-  <p>Mostrar mensaje notificacion</p>
-</div>
+@if(notificacion){
+  <div class="notificacion">
+    <p>{{notificacion}}</p>
+  </div>
+}
