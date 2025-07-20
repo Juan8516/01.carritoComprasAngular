@@ -6,9 +6,13 @@
 </div>
 
 <div class="botones">
-    <button>Añadir producto</button>
+    <input type="text" [(ngModel)]="nombreTienda"/>
+
+    <h3>{{nombreTienda}}</h3>
+    <button (click)="addProducto()">Añadir producto</button>
     <button>Añadir 5 productos</button>
     <button>Aplicar cupon</button>
+    <button>Eliminar producto</button>
     <button>Vaciar carrito</button>
 </div>
 
