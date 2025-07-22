@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 export class Carrito {
 
   nombreTienda: string = "Mi tienda";
+  precioBase: number = 100000;
   cantidadProductos: number = 0;
   totalCarrito: number = 0;
   notificacion: string = "";
@@ -20,9 +21,17 @@ export class Carrito {
 
   addProducto() {
     this.cantidadProductos += 1;
-    this.totalCarrito += 100000;
+    this.totalCarrito += this.precioBase;
 
     console.log(`Nuevo producto agregado. precio total ${this.totalCarrito} pesos`);
+    this.comprobarNotificacion();
+  }
+
+  add5Productos() {
+    this.cantidadProductos += 5;
+    this.totalCarrito += (this.precioBase * 5);
+
+    console.log(`5 productos agregados. precio total ${this.totalCarrito} pesos`);
     this.comprobarNotificacion();
   }
 
