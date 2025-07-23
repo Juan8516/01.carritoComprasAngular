@@ -35,6 +35,16 @@ export class Carrito {
     this.comprobarNotificacion();
   }
 
+  deleteProducto() {
+    if(this.cantidadProductos >= 1){
+      this.cantidadProductos -= 1;
+      this.totalCarrito += this.precioBase;
+
+      console.log(`Producto eliminado. precio total ${this.totalCarrito} pesos`);
+      this.comprobarNotificacion();
+    }
+  }
+
   comprobarNotificacion() {
 
     let limitePrecio = 1000000;
