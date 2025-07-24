@@ -45,6 +45,14 @@ export class Carrito {
     }
   }
 
+  vaciarCarrito() {
+      this.cantidadProductos = 0;
+      this.totalCarrito = 0;
+
+      console.log(`Carrito vacio. precio total ${this.totalCarrito} pesos`);
+      this.comprobarNotificacion();
+  }
+
   comprobarNotificacion() {
 
     let limitePrecio = 1000000;

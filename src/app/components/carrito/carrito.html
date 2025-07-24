@@ -2,7 +2,7 @@
 
 <div class="contenedor">
     <p>Productos en el carrito: {{cantidadProductos}}</p>
-    <P>Total del carrito: {{totalCarrito}}</P>
+    <P>Total del carrito: $ {{totalCarrito}}</P>
 </div>
 
 <div class="botones">
@@ -13,7 +13,7 @@
     <button (click)="add5Productos()">Añadir 5 productos</button>
     <button>Aplicar cupon</button>
     <button (click)="deleteProducto()">Eliminar producto</button>
-    <button>Vaciar carrito</button>
+    <button (click)="vaciarCarrito()">Vaciar carrito</button>
 </div>
 
 @if(notificacion){
