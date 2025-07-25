@@ -9,11 +9,10 @@
     <input type="text" [(ngModel)]="nombreTienda"/>
 
     <h3>{{nombreTienda}}</h3>
-    <button (click)="addProducto()">Añadir producto</button>
-    <button (click)="add5Productos()">Añadir 5 productos</button>
-    <button>Aplicar cupon</button>
-    <button (click)="deleteProducto()">Eliminar producto</button>
-    <button (click)="vaciarCarrito()">Vaciar carrito</button>
+    <button (click)="addProduct()">Añadir producto</button>
+    <button (click)="addFiveProducts()">Añadir 5 productos</button>
+    <button (click)="deleteProduct()">Eliminar producto</button>
+    <button (click)="emptyCart()">Vaciar carrito</button>
 </div>
 
 @if(notificacion){

@@ -19,7 +19,7 @@ export class Carrito {
     this.comprobarNotificacion();
   }
 
-  addProducto() {
+  addProduct() {
     this.cantidadProductos += 1;
     this.totalCarrito += this.precioBase;
 
@@ -27,7 +27,7 @@ export class Carrito {
     this.comprobarNotificacion();
   }
 
-  add5Productos() {
+  addFiveProducts() {
     this.cantidadProductos += 5;
     this.totalCarrito += (this.precioBase * 5);
 
@@ -35,7 +35,7 @@ export class Carrito {
     this.comprobarNotificacion();
   }
 
-  deleteProducto() {
+  deleteProduct() {
     if(this.cantidadProductos >= 1){
       this.cantidadProductos -= 1;
       this.totalCarrito += this.precioBase;
@@ -45,7 +45,7 @@ export class Carrito {
     }
   }
 
-  vaciarCarrito() {
+  emptyCart() {
       this.cantidadProductos = 0;
       this.totalCarrito = 0;
 
