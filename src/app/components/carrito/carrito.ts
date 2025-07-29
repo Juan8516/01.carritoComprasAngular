@@ -13,6 +13,7 @@ export class Carrito {
   precioBase: number = 100000;
   cantidadProductos: number = 0;
   totalCarrito: number = 0;
+  contadorCupon: number = 0;
   notificacion: string = "";
 
   ngOnInit() {
@@ -41,6 +42,16 @@ export class Carrito {
       this.totalCarrito += this.precioBase;
 
       console.log(`Producto eliminado. precio total ${this.totalCarrito} pesos`);
+      this.comprobarNotificacion();
+    }
+  }
+
+  descuento() {
+    if(this.totalCarrito > 0 && this.contadorCupon <= 0) {
+      this.contadorCupon = 1;
+      this.totalCarrito *= 0.8;
+
+      console.log(`descuento aplicado ${this.totalCarrito} pesos`);
       this.comprobarNotificacion();
     }
   }
