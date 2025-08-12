@@ -13,8 +13,17 @@ export class CarritoSignals {
 
   aumentar() {
 
-    this.contador.set(this.contador() + 1);
+    //this.contador.set(this.contador() + 1);
+    this.contador.update(contadorActual => contadorActual + 1);
 
+  }
+
+  ngOnInit() {
+    console.log("La aplicacion ha cargado");
+  }
+
+  ngDoCheck() {
+    console.log("Se ha detectado un cambio en el componente");
   }
 
 }
