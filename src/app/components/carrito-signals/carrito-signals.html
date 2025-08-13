@@ -3,5 +3,9 @@
 
 <h3>Contador: {{contador()}}</h3>
 
+<input type="number"
+        [value]="incremento()"
+        (input)="incremento.set(+($any($event.target).value))"/>
+
 
 <button (click)="aumentar()">Aumentar</button>

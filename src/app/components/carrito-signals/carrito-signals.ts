@@ -10,11 +10,12 @@ import { signal } from '@angular/core';
 export class CarritoSignals {
 
   contador = signal(0);
+  incremento = signal(1);
 
   aumentar() {
 
     //this.contador.set(this.contador() + 1);
-    this.contador.update(contadorActual => contadorActual + 1);
+    this.contador.update(contadorActual => contadorActual + this.incremento());
 
   }
 
