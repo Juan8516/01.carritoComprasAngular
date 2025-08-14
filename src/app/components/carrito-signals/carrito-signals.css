@@ -41,3 +41,24 @@ button {
   border-radius: 8px;
   font-size: 1rem;
 }
+
+input[type="number"] {
+  width: 100px;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  border: 2px solid rgb(162, 79, 241);
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+  margin: 1rem;
+}
+
+/* Efecto al enfocar */
+input[type="number"]:focus {
+  border-color: #26a69a;      /* color más oscuro al enfocar */
+  box-shadow: 0 0 5px rgba(43, 187, 173, 0.5);
+}
+
+
