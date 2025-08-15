@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { signal } from '@angular/core';
+import { signal, computed } from '@angular/core';
 
 @Component({
   selector: 'app-carrito-signals',
@@ -11,6 +11,7 @@ export class CarritoSignals {
 
   contador = signal(0);
   incremento = signal(1);
+  contadorx3 = computed(() => this.contador() * 3);
 
   aumentar() {
 
